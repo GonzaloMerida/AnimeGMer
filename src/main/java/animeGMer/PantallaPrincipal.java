@@ -29,7 +29,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonGoToPends = new javax.swing.JButton();
         jButtonGoToFavs = new javax.swing.JButton();
-        jButtonGoToDetails = new javax.swing.JButton();
+        jButtonGoToGeneral = new javax.swing.JButton();
+        jButtonGoToDetails1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jTextFieldBuscador = new javax.swing.JTextField();
         jLabelBuscador = new javax.swing.JLabel();
@@ -47,7 +48,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jButtonGoToFavs.setText("Ver mis favoritos");
 
-        jButtonGoToDetails.setText("Ver detalles");
+        jButtonGoToGeneral.setText("Ver todos");
+
+        jButtonGoToDetails1.setText("Ver detalles");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,7 +59,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(33, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonGoToDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonGoToDetails1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonGoToGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonGoToFavs, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonGoToPends, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
@@ -64,12 +68,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(34, 34, 34)
+                .addComponent(jButtonGoToGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonGoToDetails1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonGoToFavs, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonGoToPends, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonGoToDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -201,8 +207,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDeleteFav;
     private javax.swing.JButton jButtonDeletePend;
     private javax.swing.JButton jButtonFilter;
-    private javax.swing.JButton jButtonGoToDetails;
+    private javax.swing.JButton jButtonGoToDetails1;
     private javax.swing.JButton jButtonGoToFavs;
+    private javax.swing.JButton jButtonGoToGeneral;
     private javax.swing.JButton jButtonGoToPends;
     private javax.swing.JLabel jLabelBuscador;
     private javax.swing.JList<String> jList1;
