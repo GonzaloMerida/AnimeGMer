@@ -24,6 +24,9 @@ public class User {
     @Column(length = 100)
     private String userName;
     
+    @Column(length = 12)
+    private String password;
+    
     @Column
     private Blob userImage;
     
@@ -46,8 +49,9 @@ public class User {
     public User() {
     }
 
-    public User(String userName, Blob userImage, int numFavs, int numPends) {
+    public User(String userName, String password, Blob userImage, int numFavs, int numPends) {
         this.userName = userName;
+        this.password = password;
         this.userImage = userImage;
         this.numFavs = numFavs;
         this.numPends = numPends;

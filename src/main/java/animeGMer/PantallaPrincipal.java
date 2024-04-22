@@ -32,61 +32,53 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jButtonGoToGeneral = new javax.swing.JButton();
         jButtonGoToDetails1 = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
-        jTextFieldBuscador = new javax.swing.JTextField();
-        jLabelBuscador = new javax.swing.JLabel();
-        jButtonFilter = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jButtonAddToFav = new javax.swing.JButton();
-        jButtonDeleteFav = new javax.swing.JButton();
-        jButtonAddToPends = new javax.swing.JButton();
-        jButtonDeletePend = new javax.swing.JButton();
+        jLabelAppTitle = new javax.swing.JLabel();
+        jLabelAppImage = new javax.swing.JLabel();
+        jLabelLogin = new javax.swing.JLabel();
+        jLabelUser = new javax.swing.JLabel();
+        jTextFieldUserText = new javax.swing.JTextField();
+        jLabelPassword = new javax.swing.JLabel();
+        jTextFieldPasswordText = new javax.swing.JTextField();
+        jButtonEnter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanelMenuButtons.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonGoToPends.setText("Ver pendientes");
-        jPanelMenuButtons.add(jButtonGoToPends, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 211, 152, 41));
+        jPanelMenuButtons.add(jButtonGoToPends, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 152, 41));
 
         jButtonGoToFavs.setText("Ver mis favoritos");
-        jPanelMenuButtons.add(jButtonGoToFavs, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 152, 152, 41));
+        jPanelMenuButtons.add(jButtonGoToFavs, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 152, 41));
 
         jButtonGoToGeneral.setText("Ver todos");
-        jPanelMenuButtons.add(jButtonGoToGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 34, 152, 41));
+        jPanelMenuButtons.add(jButtonGoToGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 152, 41));
 
         jButtonGoToDetails1.setText("Ver detalles");
-        jPanelMenuButtons.add(jButtonGoToDetails1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 93, 152, 41));
+        jPanelMenuButtons.add(jButtonGoToDetails1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 152, 41));
 
         jPanelMain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanelMain.add(jTextFieldBuscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 29, 386, -1));
 
-        jLabelBuscador.setText("Buscador:");
-        jPanelMain.add(jLabelBuscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 32, 99, -1));
+        jLabelAppTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelAppTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelAppTitle.setText("ANIMEGMER");
+        jPanelMain.add(jLabelAppTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 16, 450, 30));
+        jPanelMain.add(jLabelAppImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 710, 380));
 
-        jButtonFilter.setText("Filtrar");
-        jPanelMain.add(jButtonFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 29, -1, -1));
+        jLabelLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelLogin.setText("Iniciar sesión:");
+        jPanelMain.add(jLabelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 80, 20));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        jLabelUser.setText("Usuario:");
+        jPanelMain.add(jLabelUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 60, 20));
+        jPanelMain.add(jTextFieldUserText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 210, -1));
 
-        jPanelMain.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 91, 1116, 454));
+        jLabelPassword.setText("Usuario:");
+        jPanelMain.add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 560, 60, 20));
+        jPanelMain.add(jTextFieldPasswordText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 210, -1));
 
-        jButtonAddToFav.setText("Añadir a Favoritos");
-        jPanelMain.add(jButtonAddToFav, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 607, -1, -1));
-
-        jButtonDeleteFav.setText("Borrar de favorirtos");
-        jPanelMain.add(jButtonDeleteFav, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 607, -1, -1));
-
-        jButtonAddToPends.setText("Añadir a pendientes");
-        jPanelMain.add(jButtonAddToPends, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 607, -1, -1));
-
-        jButtonDeletePend.setText("Eliminar de pendientes");
-        jPanelMain.add(jButtonDeletePend, new org.netbeans.lib.awtextra.AbsoluteConstraints(564, 607, -1, -1));
+        jButtonEnter.setText("ENTRAR");
+        jPanelMain.add(jButtonEnter, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 610, 140, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,19 +86,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jPanelMenuButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addComponent(jPanelMenuButtons, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, 828, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelMain, javax.swing.GroupLayout.DEFAULT_SIZE, 761, Short.MAX_VALUE)
                     .addComponent(jPanelMenuButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -148,20 +140,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAddToFav;
-    private javax.swing.JButton jButtonAddToPends;
-    private javax.swing.JButton jButtonDeleteFav;
-    private javax.swing.JButton jButtonDeletePend;
-    private javax.swing.JButton jButtonFilter;
+    private javax.swing.JButton jButtonEnter;
     private javax.swing.JButton jButtonGoToDetails1;
     private javax.swing.JButton jButtonGoToFavs;
     private javax.swing.JButton jButtonGoToGeneral;
     private javax.swing.JButton jButtonGoToPends;
-    private javax.swing.JLabel jLabelBuscador;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JLabel jLabelAppImage;
+    private javax.swing.JLabel jLabelAppTitle;
+    private javax.swing.JLabel jLabelLogin;
+    private javax.swing.JLabel jLabelPassword;
+    private javax.swing.JLabel jLabelUser;
     private javax.swing.JPanel jPanelMain;
     private javax.swing.JPanel jPanelMenuButtons;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextFieldBuscador;
+    private javax.swing.JTextField jTextFieldPasswordText;
+    private javax.swing.JTextField jTextFieldUserText;
     // End of variables declaration//GEN-END:variables
 }
