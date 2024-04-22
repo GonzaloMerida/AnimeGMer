@@ -26,12 +26,12 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanelMenuButtons = new javax.swing.JPanel();
         jButtonGoToPends = new javax.swing.JButton();
         jButtonGoToFavs = new javax.swing.JButton();
         jButtonGoToGeneral = new javax.swing.JButton();
         jButtonGoToDetails1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanelMain = new javax.swing.JPanel();
         jTextFieldBuscador = new javax.swing.JTextField();
         jLabelBuscador = new javax.swing.JLabel();
         jButtonFilter = new javax.swing.JButton();
@@ -44,44 +44,28 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanelMenuButtons.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jButtonGoToPends.setText("Ver pendientes");
+        jPanelMenuButtons.add(jButtonGoToPends, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 211, 152, 41));
 
         jButtonGoToFavs.setText("Ver mis favoritos");
+        jPanelMenuButtons.add(jButtonGoToFavs, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 152, 152, 41));
 
         jButtonGoToGeneral.setText("Ver todos");
+        jPanelMenuButtons.add(jButtonGoToGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 34, 152, 41));
 
         jButtonGoToDetails1.setText("Ver detalles");
+        jPanelMenuButtons.add(jButtonGoToDetails1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 93, 152, 41));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonGoToDetails1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonGoToGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonGoToFavs, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonGoToPends, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jButtonGoToGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonGoToDetails1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonGoToFavs, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonGoToPends, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanelMain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelMain.add(jTextFieldBuscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 29, 386, -1));
 
         jLabelBuscador.setText("Buscador:");
+        jPanelMain.add(jLabelBuscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 32, 99, -1));
 
         jButtonFilter.setText("Filtrar");
+        jPanelMain.add(jButtonFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 29, -1, -1));
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -90,57 +74,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jPanelMain.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 91, 1116, 454));
+
         jButtonAddToFav.setText("Añadir a Favoritos");
+        jPanelMain.add(jButtonAddToFav, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 607, -1, -1));
 
         jButtonDeleteFav.setText("Borrar de favorirtos");
+        jPanelMain.add(jButtonDeleteFav, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 607, -1, -1));
 
         jButtonAddToPends.setText("Añadir a pendientes");
+        jPanelMain.add(jButtonAddToPends, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 607, -1, -1));
 
         jButtonDeletePend.setText("Eliminar de pendientes");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jLabelBuscador, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextFieldBuscador, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonFilter)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButtonAddToFav)
-                        .addGap(56, 56, 56)
-                        .addComponent(jButtonDeleteFav)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButtonAddToPends)
-                        .addGap(57, 57, 57)
-                        .addComponent(jButtonDeletePend)))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldBuscador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelBuscador)
-                    .addComponent(jButtonFilter))
-                .addGap(39, 39, 39)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonAddToFav)
-                    .addComponent(jButtonDeleteFav)
-                    .addComponent(jButtonAddToPends)
-                    .addComponent(jButtonDeletePend))
-                .addContainerGap(89, Short.MAX_VALUE))
-        );
+        jPanelMain.add(jButtonDeletePend, new org.netbeans.lib.awtextra.AbsoluteConstraints(564, 607, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,19 +94,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelMenuButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addComponent(jPanelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(jPanelMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelMenuButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         pack();
@@ -213,8 +159,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGoToPends;
     private javax.swing.JLabel jLabelBuscador;
     private javax.swing.JList<String> jList1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanelMain;
+    private javax.swing.JPanel jPanelMenuButtons;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextFieldBuscador;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@
 package animeGMer;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.sql.Blob;
 import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
@@ -22,6 +23,9 @@ public class User {
     
     @Column(length = 100)
     private String userName;
+    
+    @Column
+    private Blob userImage;
     
     @Column
     private int numFavs;
@@ -42,8 +46,9 @@ public class User {
     public User() {
     }
 
-    public User(String userName, int numFavs, int numPends) {
+    public User(String userName, Blob userImage, int numFavs, int numPends) {
         this.userName = userName;
+        this.userImage = userImage;
         this.numFavs = numFavs;
         this.numPends = numPends;
     }
@@ -62,6 +67,14 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public Blob getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(Blob userImage) {
+        this.userImage = userImage;
     }
 
     public int getNumFavs() {
