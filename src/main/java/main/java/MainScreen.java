@@ -2,19 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package animeGMer;
+package main.java;
 
 /**
  *
  * @author gonza
  */
-public class PantallaPrincipal extends javax.swing.JFrame {
+public class MainScreen extends javax.swing.JFrame {
 
     /**
      * Creates new form PantallaPrincipal
      */
-    public PantallaPrincipal() {
+    public MainScreen() {
         initComponents();
+        jButtonGoToDetails.setVisible(false);
+        jButtonGoToFavs.setVisible(false);
+        jButtonGoToPends.setVisible(false);
+        jButtonGoToGeneral.setVisible(false);
     }
 
     /**
@@ -30,7 +34,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jButtonGoToPends = new javax.swing.JButton();
         jButtonGoToFavs = new javax.swing.JButton();
         jButtonGoToGeneral = new javax.swing.JButton();
-        jButtonGoToDetails1 = new javax.swing.JButton();
+        jButtonGoToDetails = new javax.swing.JButton();
         jPanelMain = new javax.swing.JPanel();
         jLabelAppTitle = new javax.swing.JLabel();
         jLabelAppImage = new javax.swing.JLabel();
@@ -54,8 +58,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jButtonGoToGeneral.setText("Ver todos");
         jPanelMenuButtons.add(jButtonGoToGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 152, 41));
 
-        jButtonGoToDetails1.setText("Ver detalles");
-        jPanelMenuButtons.add(jButtonGoToDetails1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 152, 41));
+        jButtonGoToDetails.setText("Ver detalles");
+        jPanelMenuButtons.add(jButtonGoToDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 152, 41));
 
         jPanelMain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -121,27 +125,28 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PantallaPrincipal().setVisible(true);
+                new MainScreen().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEnter;
-    private javax.swing.JButton jButtonGoToDetails1;
+    private javax.swing.JButton jButtonGoToDetails;
     private javax.swing.JButton jButtonGoToFavs;
     private javax.swing.JButton jButtonGoToGeneral;
     private javax.swing.JButton jButtonGoToPends;

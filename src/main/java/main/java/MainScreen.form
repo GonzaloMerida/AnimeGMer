@@ -82,7 +82,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonGoToDetails1">
+        <Component class="javax.swing.JButton" name="jButtonGoToDetails">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver detalles"/>
           </Properties>
