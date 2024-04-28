@@ -4,7 +4,6 @@
  */
 package main.java;
 
-import java.sql.Blob;
 import java.sql.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,7 +29,7 @@ public class Anime {
 
     @Column
     private Date launchDate;
-    
+
     @Column
     private int numEpisodes;
 
@@ -44,7 +43,7 @@ public class Anime {
     private Double rating;
 
     @Column
-    private Blob animeImage;
+    private byte[] animeImage;
 
     @Column(nullable = true)
     private Boolean fav;
@@ -56,20 +55,20 @@ public class Anime {
     @JoinTable(name = "anime_user",
             joinColumns = @JoinColumn(name = "idAnime"),
             inverseJoinColumns = @JoinColumn(name = "idUser"))
-    private List<User> usersList = new LinkedList<>();
-    
+    private List<Users> usersList = new LinkedList<>();
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Favorite> favoriteList = new LinkedList<>();
-    
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Pending> pendingList = new LinkedList<>();
-    
+
 
     public Anime() {
 
     }
 
-    public Anime(String title, String genre, Date launchDate, int numEpisodes, String studios, String summary, Double rating, Blob animeImage, Boolean fav, Boolean pend) {
+    public Anime(String title, String genre, Date launchDate, int numEpisodes, String studios, String summary, Double rating, byte[] animeImage, Boolean fav, Boolean pend) {
         this.title = title;
         this.genre = genre;
         this.launchDate = launchDate;
@@ -121,8 +120,6 @@ public class Anime {
     public void setNumEpisodes(int numEpisodes) {
         this.numEpisodes = numEpisodes;
     }
-    
-    
 
     public String getStudios() {
         return studios;
@@ -148,11 +145,11 @@ public class Anime {
         this.rating = rating;
     }
 
-    public Blob getAnimeImage() {
+    public byte[] getAnimeImage() {
         return animeImage;
     }
 
-    public void setAnimeImage(Blob animeImage) {
+    public void setAnimeImage(byte[] animeImage) {
         this.animeImage = animeImage;
     }
 
@@ -172,11 +169,11 @@ public class Anime {
         this.pend = pend;
     }
 
-    public List<User> getUsersList() {
+    public List<Users> getUsersList() {
         return usersList;
     }
 
-    public void setUsersList(List<User> usersList) {
+    public void setUsersList(List<Users> usersList) {
         this.usersList = usersList;
     }
 
@@ -197,7 +194,5 @@ public class Anime {
     }
 
 
-    
-    
 
 }

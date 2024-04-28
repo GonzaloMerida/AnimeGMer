@@ -4,8 +4,6 @@
  */
 package main.java;
 
-import java.sql.Blob;
-import java.sql.Date;
 import javax.persistence.*;
 
 /**
@@ -17,31 +15,31 @@ public class Favorite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFav;
-    
+
     @Column(nullable = true)
     private Double userRating;
 
     @Column(nullable = true, length = 700)
     private String userComments;
-    
+
     @Column
-    private Blob animeImage;
-    
+    private byte[] animeImage;
+
     @ManyToOne
     private Anime anime;
-    
+
     @ManyToOne
-    private User user;
+    private Users user;
 
     public Favorite() {
     }
 
-    public Favorite(Double userRating, String userComments, Blob animeImage) {
+    public Favorite(Double userRating, String userComments, byte[] animeImage) {
         this.userRating = userRating;
         this.userComments = userComments;
         this.animeImage = animeImage;
     }
-    
+
     public int getIdFav() {
         return idFav;
     }
@@ -66,11 +64,11 @@ public class Favorite {
         this.userComments = userComments;
     }
 
-    public Blob getAnimeImage() {
+    public byte[] getAnimeImage() {
         return animeImage;
     }
 
-    public void setAnimeImage(Blob animeImage) {
+    public void setAnimeImage(byte[] animeImage) {
         this.animeImage = animeImage;
     }
 
@@ -82,13 +80,13 @@ public class Favorite {
         this.anime = anime;
     }
 
-    public User getUser() {
+    public Users getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Users user) {
         this.user = user;
     }
-    
-    
+
+
 }

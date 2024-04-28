@@ -3,9 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main.java;
-
-import java.sql.Blob;
-import java.sql.Date;
 import javax.persistence.*;
 
 /**
@@ -21,25 +18,25 @@ public class Pending {
 
     @Column
     private int priority;
-    
+
     @Column
-    private Blob animeImage;
+    private byte[] animeImage;
 
     @ManyToOne
     private Anime anime;
 
     @ManyToOne
-    private User user;
+    private Users user;
 
     public Pending() {
     }
 
-    public Pending(int priority, Blob animeImage) {
+    public Pending(int priority, byte[] animeImage) {
         this.priority = priority;
         this.animeImage = animeImage;
     }
-    
-    
+
+
 
     public int getIdPend() {
         return idPend;
@@ -57,11 +54,11 @@ public class Pending {
         this.priority = priority;
     }
 
-    public Blob getAnimeImage() {
+    public byte[] getAnimeImage() {
         return animeImage;
     }
 
-    public void setAnimeImage(Blob animeImage) {
+    public void setAnimeImage(byte[] animeImage) {
         this.animeImage = animeImage;
     }
 
@@ -73,14 +70,14 @@ public class Pending {
         this.anime = anime;
     }
 
-    public User getUser() {
+    public Users getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Users user) {
         this.user = user;
     }
-    
-    
+
+
 
 }

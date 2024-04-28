@@ -5,7 +5,7 @@
 package main.java;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.sql.Blob;
+
 import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
@@ -16,40 +16,40 @@ import javax.persistence.*;
  */
 
 @Entity
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;
-    
+
     @Column(length = 100)
     private String userName;
-    
+
     @Column(length = 12)
     private String password;
-    
+
     @Column
-    private Blob userImage;
-    
+    private byte[] userImage;
+
     @Column
     private int numFavs;
-    
+
     @Column
     private int numPends;
 
     @ManyToMany(mappedBy = "usersList", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Anime> animeList = new LinkedList<>();
-    
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Favorite> favoriteList = new LinkedList<>();
-    
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Pending> pendingList = new LinkedList<>();
-    
-    public User() {
+
+    public Users() {
     }
 
-    public User(String userName, String password, Blob userImage, int numFavs, int numPends) {
+    public Users(String userName, String password, byte[] userImage, int numFavs, int numPends) {
         this.userName = userName;
         this.password = password;
         this.userImage = userImage;
@@ -73,11 +73,19 @@ public class User {
         this.userName = userName;
     }
 
-    public Blob getUserImage() {
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public byte[] getUserImage() {
         return userImage;
     }
 
-    public void setUserImage(Blob userImage) {
+    public void setUserImage(byte[] userImage) {
         this.userImage = userImage;
     }
 
@@ -120,8 +128,9 @@ public class User {
     public void setPendingList(List<Pending> pendingList) {
         this.pendingList = pendingList;
     }
-    
-    
-    
-    
+
+
+
+
 }
+

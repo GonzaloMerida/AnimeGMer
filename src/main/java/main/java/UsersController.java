@@ -24,22 +24,22 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/")
-public class UserController {
+public class UsersController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UsersRepository userRepository;
 
     @GetMapping("/user/")
-    public List<User> allUsers() {
+    public List<Users> allUsers() {
         return userRepository.findAll();
     }
 
     @PutMapping("/user/{userName}/userName")
     public ResponseEntity<String> updateUserName(@PathVariable("userName") String pathUserName, @RequestBody String requestBodyUserName) {
-        Optional<User> optionalUser = userRepository.findByUserName(pathUserName);
+        Optional<Users> optionalUser = userRepository.findByUserName(pathUserName);
 
         if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
+            Users user = optionalUser.get();
             user.setUserName(requestBodyUserName);
             userRepository.save(user);
             return ResponseEntity.ok("Nombre de usuario actualizado correctamente");
@@ -50,10 +50,10 @@ public class UserController {
 
     @GetMapping("/user/{userName}/numFavs")
     public ResponseEntity<Integer> getNumFavs(@PathVariable("userName") String userName) {
-        Optional<User> optionalUser = userRepository.findByUserName(userName);
+        Optional<Users> optionalUser = userRepository.findByUserName(userName);
 
         if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
+            Users user = optionalUser.get();
             return ResponseEntity.ok(user.getNumFavs());
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
@@ -62,10 +62,10 @@ public class UserController {
 
     @GetMapping("/user/{userName}/numPends")
     public ResponseEntity<Integer> getNumPends(@PathVariable("userName") String userName) {
-        Optional<User> optionalUser = userRepository.findByUserName(userName);
+        Optional<Users> optionalUser = userRepository.findByUserName(userName);
 
         if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
+            Users user = optionalUser.get();
             return ResponseEntity.ok(user.getNumPends());
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
@@ -74,10 +74,10 @@ public class UserController {
 
     @GetMapping("/user/{userName}/favoriteNames")
     public ResponseEntity<List<String>> getFavoriteNames(@PathVariable("userName") String userName) {
-        Optional<User> optionalUser = userRepository.findByUserName(userName);
+        Optional<Users> optionalUser = userRepository.findByUserName(userName);
 
         if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
+            Users user = optionalUser.get();
             List<Favorite> favoriteList = user.getFavoriteList();
             List<String> favoriteNames = new ArrayList<>();
             for (Favorite favorite : favoriteList) {
@@ -91,10 +91,10 @@ public class UserController {
 
     @GetMapping("/user/{userName}/pendingNames")
     public ResponseEntity<List<String>> getPendingNames(@PathVariable("userName") String userName) {
-        Optional<User> optionalUser = userRepository.findByUserName(userName);
+        Optional<Users> optionalUser = userRepository.findByUserName(userName);
 
         if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
+            Users user = optionalUser.get();
             List<Pending> pendingList = user.getPendingList();
             List<String> pendingNames = new ArrayList<>();
             for (Pending pending : pendingList) {
